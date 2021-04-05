@@ -1,0 +1,93 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: rgb(97, 218, 187);
+}
+
+.main-calc {
+   margin: 60px auto;
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr 1fr;
+   grid-gap: 4px;
+   background-color: rgb(228, 228, 228);
+   padding: 4px;
+   border-radius: 5px;
+   max-width: 360px;
+}
+
+.blc {
+    background-color: rgb(255, 255, 255);
+    color: black;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: .5s all;
+    /* заборона виділяти текст */
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    -webkit-user-select: none;
+}
+
+.blc .pre_textview {
+    font-size: 20px;
+    color: rgb(159, 160, 160);
+    height: 40px;
+    padding-top: 15px;
+}
+
+input {
+    width: 100%;
+    height: 60px;
+    border: none;
+    font-size: 35px;
+    outline: none;
+    text-align: right;
+    padding: 0 10px;
+}
+
+input.textview {
+    font-weight: 500;
+}
+
+.blc.operation, .back{
+    background-color: rgb(207, 207, 207);
+}
+
+.blc:hover {
+    background-color: rgb(50, 144, 207);
+}
+
+.inp {
+    grid-column: 1/-1;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.reset {
+    grid-column: 1/3;
+    background-color: rgb(207, 207, 207);
+}
+
+.back {
+    grid-column: 3/-1;
+}
+
+.zero {
+    grid-column: 1/3;
+}
+
+.equal {
+    grid-column: 4;
+    grid-row: 6/8;
+    background-color: rgb(207, 207, 207);
+}
